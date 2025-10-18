@@ -12,6 +12,17 @@ Mini Dashboard displaying trading analytics
 
 - Backend mimics providin JSON data 
 
+## Dashboard Screenshots
+
+![dashboard-ui](./assets/dashboard.jpg)
+*dashboard-ui*
+
+![chart-ui](./assets/chart.jpg)
+*charts-ui*
+
+![tables-ui](./assets/tables-img.jpg)
+*trades-table-ui*
+
 
 ##  Project Structure
 
