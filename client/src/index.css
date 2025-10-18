@@ -1,0 +1,217 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: lighter;
+
+  color-scheme: light dark;
+  color: #d4d4d4;
+  background-color: #181818;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* background-color: red; */
+  gap: 1.5rem;
+
+}
+
+.main h1 {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-top: 1rem;
+}
+
+/* Metrics Conatainer */
+
+.metrics-container {
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+/* Metric Card */
+
+.metric-card {
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1e1e1e;
+  color: #e5e5e5;
+  /* justify-content: space-between; */
+  /* gap: 1.5rem; */
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border-color: #3a3a3a;
+}
+
+.metric-title {
+  /* font-weight: bold; */
+  font-size: 1.2rem;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #d4d4d4; 
+}
+
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  /* width: 120px; */
+  background-color: #3a3939;
+  color: #fff;
+  text-align: center;
+  padding: 5px 2px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Charts */
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  /* border: 2px solid red;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.chart-container p {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+/* Recent Trades Table */
+
+.recent-trades-table {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem 2rem;
+
+}
+
+.recent-trades-table p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f1f1f1;
+  min-width: 800px;
+}
+
+th {
+  font-weight: normal;
+}
+
+th, td {
+  padding: 1rem;
+}
+
+table, th, td {
+  border: 1px solid #2a2a2a;
+  border-collapse: collapse;
+  border-radius: 5px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #1e1e1e;
+   transition: all 0.3s ease;
+  
+}
+
+td {
+  cursor: pointer;
+  text-align: center;
+}
+
+.buy {
+  color: #4da3ff;
+}
+
+.sell {
+  color: #ffd54f;
+}
+
+.profit {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.loss {
+  color: #e53935;
+  font-weight: 600;
+}
